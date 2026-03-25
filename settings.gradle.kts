@@ -37,5 +37,7 @@ rootProject.name = "AccelerateKlib"
 
 include(
     ":ui:navigation",
-    ":utils"
+    ":utils",
+    ":ksp:annotation",
+    ":ksp:navigation",
 )
