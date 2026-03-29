@@ -40,4 +40,6 @@ include(
     ":utils",
     ":ksp:annotation",
     ":ksp:navigation",
+    ":example:android",
+    ":example:compose"
 )

@@ -41,8 +41,6 @@ ktor = "3.4.1"
 coil3 = "3.4.0"
 #https://github.com/InsertKoinIO/koin
 koin = "4.2.0"
-#https://github.com/InsertKoinIO/koin-annotations
-koin-annotations = "2.3.1"
 
 
 #anroidx jetpack https://developer.android.google.cn/jetpack/androidx/versions?hl=zh-cn
@@ -71,7 +69,6 @@ arrow = "2.2.2.1"
 
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 android-application = { id = "com.android.application", version.ref = "android-gradle" }
-android-library = { id = "com.android.library", version.ref = "android-gradle" }
 android-library-kmp = { id = "com.android.kotlin.multiplatform.library", version.ref = "android-gradle" }
 jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "jetbrains-compose" }
 
@@ -118,7 +115,7 @@ jetbrains-lifecycle-vmSavedState = { group = "org.jetbrains.androidx.lifecycle",
 jetbrains-savedstate-compose = { group = "org.jetbrains.androidx.savedstate", name = "savedstate-compose", version.ref = "jetbrains-savedstate" }
 jetbrains-core-bundle = { group = "org.jetbrains.androidx.core", name = "core-bundle", version.ref = "jetbrains-core-bundle" }
 jetbrains-components-resources = { group = "org.jetbrains.compose.components", name = "components-resources", version.ref = "jetbrains-compose" }
-jetbrains-components-uiToolingPPreview = { group = "org.jetbrains.compose.components", name = "components-ui-tooling-preview", version.ref = "jetbrains-compose" }
+jetbrains-components-uiToolingPreview = { group = "org.jetbrains.compose.components", name = "components-ui-tooling-preview", version.ref = "jetbrains-compose" }
 jetbrains-ui = { group = "org.jetbrains.compose.ui", name = "ui", version.ref = "jetbrains-compose" }
 jetbrains-ui-graphics = { group = "org.jetbrains.compose.ui", name = "ui-graphics", version.ref = "jetbrains-compose" }
 jetbrains-ui-util = { group = "org.jetbrains.compose.ui", name = "ui-util", version.ref = "jetbrains-compose" }
@@ -127,8 +124,8 @@ jetbrains-ui-tooling-preview = { group = "org.jetbrains.compose.ui", name = "ui-
 jetbrains-ui-test-junit4 = { group = "org.jetbrains.compose.ui", name = "ui-test-junit4", version.ref = "jetbrains-compose" }
 
 
-kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
-kotlinpoet-jvm = { module = "com.squareup:kotlinpoet-jvm", version.ref = "kotlinpoet" }
+squareup-kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
+squareup-kotlinpoet-jvm = { module = "com.squareup:kotlinpoet-jvm", version.ref = "kotlinpoet" }
 squareup-okhttp3-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
 squareup-okhttp3-loggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
 
@@ -139,8 +136,7 @@ koin-androidx-compose-navigation = { group = "io.insert-koin", name = "koin-andr
 koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin" }
 koin-compose-navigation3 = { group = "io.insert-koin", name = "koin-compose-navigation3", version.ref = "koin" }
 koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel", version.ref = "koin" }
-koin-annotations = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koin-annotations" }
-koin-compiler = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-annotations" }
+koin-annotations = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koin" }
 
 coil3-bom = { module = "io.coil-kt.coil3:coil-bom", version.ref = "coil3" }
 coil3-core = { module = "io.coil-kt.coil3:coil-core" }

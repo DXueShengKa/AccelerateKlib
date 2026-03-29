@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+group = "accelerate.ui.navigation"
+version = "0.0.1"
+
 kotlin {
 
     android {
