@@ -1,10 +1,13 @@
 package accelerate.ksp.navigation
 
 import com.google.devtools.ksp.processing.KSPLogger
+import com.google.devtools.ksp.symbol.ClassKind
+import com.google.devtools.ksp.symbol.KSClassDeclaration
 import com.google.devtools.ksp.symbol.KSFunctionDeclaration
 import com.google.devtools.ksp.symbol.KSNode
 import com.google.devtools.ksp.symbol.KSPropertyDeclaration
 import com.google.devtools.ksp.symbol.KSType
+import com.google.devtools.ksp.symbol.Modifier
 import com.google.devtools.ksp.visitor.KSEmptyVisitor
 
 class GenerateNavDsl(
@@ -40,10 +43,17 @@ class GenerateNavDsl(
         }
 
         if (routeType != null) {
-            val typeName = routeType.declaration.qualifiedName?.asString()
-            polymorphicBody.append("\n\tsubclass($typeName::class)\n")
+            val routeDeclaration = routeType.declaration as KSClassDeclaration
+            val typeName = routeDeclaration.qualifiedName?.asString()
+            polymorphicBody.append("\tsubclass($typeName::class)\n")
+
+            val param1 = if (routeDeclaration.classKind == ClassKind.OBJECT) {
+                "key = $typeName"
+            } else {
+                "clazz = $typeName::class"
+            }
             property.qualifiedName?.asString()?.also {
-                val a = "\n\taddEntryProvider($typeName, content = $it)\n"
+                val a = "\taddEntryProvider($param1, content = $it)\n"
                 data.append(a)
             }
         }

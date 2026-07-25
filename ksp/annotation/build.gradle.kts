@@ -7,6 +7,10 @@ plugins {
     alias(libs.plugins.android.library.kmp)
 }
 
+
+group = "accelerate.ksp.annotation"
+version = "0.0.1"
+
 kotlin {
     jvm()
     android {
@@ -15,12 +19,12 @@ kotlin {
     }
     iosArm64()
     iosSimulatorArm64()
-    wasmJs {
-        binaries.library()
-        browser()
-    }
-    js {
-        binaries.library()
-        browser()
-    }
+//    wasmJs {
+//        binaries.library()
+//        browser()
+//    }
+//    js {
+//        binaries.library()
+//        browser()
+//    }
 }

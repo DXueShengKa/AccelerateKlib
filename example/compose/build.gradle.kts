@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.android.library.kmp)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kotlin.composeCompiler)
+    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -55,6 +56,7 @@ kotlin {
 //            implementation(libs.androidx.lifecycle.viewmodelCompose)
 //            implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(projects.ui.navigation)
+            implementation(libs.jetbrains.navigation3.ui)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -80,4 +82,9 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+dependencies {
+    "androidRuntimeClasspath"(libs.jetbrains.ui.tooling)
+    ksp(projects.ksp.navigation)
 }

@@ -16,6 +16,7 @@ kotlin {
     jvm()
 
     android {
+        minSdk = 26
         compileSdk { version = release(36) }
     }
 
@@ -40,8 +41,7 @@ kotlin {
         freeCompilerArgs.addAll(
             "-Xcontext-parameters",
             "-Xexpect-actual-classes",
-//            报错
-//            "-Xexplicit-backing-fields",
+            "-Xexplicit-backing-fields",
         )
     }
 }
